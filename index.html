@@ -3,127 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AURA, tienda de moda contemporánea. Descubre prendas y accesorios de diseño atemporal con envío a todo el país.">
+  <meta name="description" content="AURA, moda contemporánea de diseño atemporal. Prendas y accesorios seleccionados, con envío a todo el país.">
+  <meta name="theme-color" content="#F5F1EA">
   <title>AURA | Moda contemporánea</title>
   <link rel="preload" as="image" href="assets/img/hero.webp" fetchpriority="high">
   <link rel="preload" href="assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <meta name="google-site-verification" content="REEMPLAZAR_CON_CODIGO_DE_SEARCH_CONSOLE">
+  <link rel="stylesheet" href="css/landing.css">
 </head>
 <body data-page="home">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <div id="site-header"></div>
 
-  <main>
-    <section class="hero">
-      <canvas class="hero__dots" data-dotted-glow aria-hidden="true"></canvas>
+  <main id="contenido" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="container hero__inner">
         <div class="hero__copy">
-          <span class="eyebrow">Colección Otoño 2026</span>
-          <h1 class="hero__title">Estilo que se siente <em>como tú</em>.</h1>
-          <p class="hero__text">Prendas y accesorios de diseño atemporal, confeccionados con materiales seleccionados para acompañarte todos los días.</p>
+          <p class="eyebrow">01 — Colección permanente</p>
+          <h1 class="hero__title" id="hero-title">El estilo no se impone. <em>Se elige.</em></h1>
+          <p class="hero__text">Prendas y accesorios de diseño atemporal, elegidos por su materia, su caída y la forma en que acompañan la vida cotidiana.</p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="catalogo.html">Comprar ahora</a>
-            <a class="btn btn--ghost" href="#novedades">Ver novedades</a>
+            <a class="btn btn--primary" href="catalogo.html">Explorar colección</a>
+            <a class="btn btn--text" href="#novedades">Ver novedades</a>
           </div>
-          <div class="hero__proof">
-            <div>
-              <span class="stars" aria-label="4.9 de 5 estrellas"><span>★★★★★</span></span>
-              <strong>4.9/5</strong>
-            </div>
-            <div>
-              <span>Más de 2.500 clientes</span>
-              <span>califican nuestra calidad</span>
-            </div>
-          </div>
+          <p class="hero__note">Envío gratis desde $75 · Cambios sin costo durante 30 días</p>
         </div>
-        <div class="hero__visual">
-          <img src="assets/img/hero.webp" alt="Selección de prendas de la nueva colección AURA" fetchpriority="high" decoding="async">
-          <div class="hero__tag">
-            <span>Nueva colección</span>
-            <strong>Desde $24.90</strong>
-            <em>Envío gratis desde $75</em>
-          </div>
-          <div class="hero__badge">Hasta 30% off</div>
-        </div>
+        <figure class="hero__visual">
+          <img src="assets/img/hero.webp" alt="Perchero con prendas de tonos neutros de la colección AURA" width="1599" height="1066" fetchpriority="high" decoding="async">
+          <figcaption>
+            <span>AURA / Estudio de estilo</span>
+            <span>Selección 2026</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="benefits" aria-label="Ventajas de comprar en AURA">
+    <section class="benefits" aria-label="Servicios de AURA">
       <div class="container benefits__grid">
         <div class="benefit">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v10H3z"/><path d="M14 10h4l3 3v4h-7"/><circle cx="7" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/></svg>
-          <div>
-            <strong>Envío gratis</strong>
-            <p>En compras superiores a $75 a todo el país.</p>
-          </div>
+          <strong>Envío gratis</strong>
+          <p>En compras superiores a $75 a todo el país.</p>
         </div>
         <div class="benefit">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h11a4 4 0 0 1 0 8H8"/><path d="m8 5-4 4 4 4"/></svg>
-          <div>
-            <strong>Devoluciones fáciles</strong>
-            <p>Tenés 30 días para cambiar o devolver tu pedido.</p>
-          </div>
+          <strong>Cambios simples</strong>
+          <p>Tenés 30 días para cambiar o devolver tu pedido.</p>
         </div>
         <div class="benefit">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <div>
-            <strong>Pago 100% seguro</strong>
-            <p>Protegemos tus datos en cada transacción.</p>
-          </div>
+          <strong>Checkout simple</strong>
+          <p>Un proceso claro, en tres pasos y sin vueltas.</p>
         </div>
         <div class="benefit">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8 9h8M8 12h5"/></svg>
-          <div>
-            <strong>Atención personalizada</strong>
-            <p>Te ayudamos a elegir lo que mejor te queda.</p>
-          </div>
+          <strong>Seguimiento</strong>
+          <p>Consultá el estado de tu pedido desde tu cuenta.</p>
         </div>
       </div>
     </section>
 
-    <section class="section" id="categorias">
+    <section class="section" id="categorias" aria-labelledby="categorias-title">
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">Explorá</span>
-            <h2>Encontrá tu estilo</h2>
-            <p>Tres universos, una misma idea: prendas que se adaptan a tu forma de vivir.</p>
+            <p class="eyebrow">02 — Categorías</p>
+            <h2 id="categorias-title">Tres formas<br>de vestir el día.</h2>
+            <p>Una misma idea de elegancia cotidiana, aplicada a prendas y accesorios que se combinan entre sí.</p>
           </div>
           <a class="link-arrow" href="catalogo.html">Ver catálogo completo
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
           </a>
         </div>
         <div class="categories__grid">
           <a class="category-card" href="catalogo.html?categoria=mujer">
-            <img src="assets/img/cat-mujer.webp" alt="Moda para mujer" loading="lazy" decoding="async">
+            <figure class="category-card__media">
+              <img src="assets/img/dress.webp" alt="Vestido rojo de la colección mujer" width="899" height="1080" loading="lazy" decoding="async">
+            </figure>
             <div class="category-card__content">
               <h3>Mujer</h3>
               <p>Prendas con carácter y sofisticación cotidiana.</p>
               <span class="category-card__link">Descubrir
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
               </span>
             </div>
           </a>
           <a class="category-card" href="catalogo.html?categoria=hombre">
-            <img src="assets/img/jacket.webp" alt="Moda para hombre" loading="lazy" decoding="async">
+            <figure class="category-card__media">
+              <img src="assets/img/shirt.webp" alt="Camisa blanca de la colección hombre" width="899" height="719" loading="lazy" decoding="async">
+            </figure>
             <div class="category-card__content">
               <h3>Hombre</h3>
-              <p>Básicos urbanos, cortes limpios y comodidad.</p>
+              <p>Sastrería relajada, cortes limpios y comodidad.</p>
               <span class="category-card__link">Descubrir
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
               </span>
             </div>
           </a>
           <a class="category-card" href="catalogo.html?categoria=accesorios">
-            <img src="assets/img/bag.webp" alt="Accesorios de moda" loading="lazy" decoding="async">
+            <figure class="category-card__media">
+              <img src="assets/img/bag.webp" alt="Bolso rojo de la colección de accesorios" width="899" height="1199" loading="lazy" decoding="async">
+            </figure>
             <div class="category-card__content">
               <h3>Accesorios</h3>
               <p>El detalle final que transforma cualquier look.</p>
               <span class="category-card__link">Descubrir
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
               </span>
             </div>
           </a>
@@ -131,47 +115,48 @@
       </div>
     </section>
 
-    <section class="section" id="novedades">
+    <section class="section section--products" id="novedades" aria-labelledby="novedades-title">
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">Lo más deseado</span>
-            <h2>Novedades de la temporada</h2>
-            <p>Las piezas favoritas de nuestra comunidad, listas para sumarse a tu guardarropa.</p>
+            <p class="eyebrow">03 — Selección</p>
+            <h2 id="novedades-title">Piezas para quedarse.</h2>
+            <p>Cuatro piezas que resumen la temporada. Pocas, precisas y fáciles de combinar.</p>
           </div>
           <a class="link-arrow" href="catalogo.html">Ver todo
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
           </a>
         </div>
         <div class="products-grid" id="featured-grid"></div>
       </div>
     </section>
 
-    <section class="promo-band">
+    <section class="promo-band" aria-labelledby="campaign-title">
       <div class="container promo-band__inner">
-        <div>
-          <span class="eyebrow">Ofertas de temporada</span>
-          <h2>Hasta un 30% de descuento en <em>selección otoño</em>.</h2>
-          <p>Aprovechá precios especiales en chaquetas, jeans y accesorios icónicos. Stock limitado, mientras dure la temporada.</p>
-          <a class="btn btn--light" href="catalogo.html">Ver ofertas</a>
-        </div>
-        <div class="promo-band__visual">
-          <img src="assets/img/sneakers.webp" alt="Zapatillas urbanas en oferta" loading="lazy" decoding="async">
-          <div class="promo-band__stamp">Hasta 30% off</div>
+        <figure class="promo-band__visual">
+          <img src="assets/img/cat-mujer.webp" alt="Mujer con abrigo vino y bolsas de compras" width="799" height="532" loading="lazy" decoding="async">
+          <figcaption>Abrigo vino · Colección mujer</figcaption>
+        </figure>
+        <div class="promo-band__copy">
+          <p class="eyebrow">04 — El gesto</p>
+          <h2 id="campaign-title">El abrigo como<br><em>punto de partida</em>.</h2>
+          <p>Siluetas limpias, tonos profundos y una idea simple: vestir sin ruido. Una pieza fuerte alcanza para ordenar todo el conjunto.</p>
+          <a class="btn btn--light" href="catalogo.html?categoria=mujer">Explorar mujer</a>
         </div>
       </div>
     </section>
 
-    <section class="newsletter">
+    <section class="newsletter" aria-labelledby="newsletter-title">
       <div class="container newsletter__inner">
-        <div>
-          <span class="eyebrow">Newsletter AURA</span>
-          <h2>10% de descuento en tu primera compra</h2>
-          <p>Suscribite para recibir novedades, lanzamientos exclusivos y ofertas antes que nadie.</p>
+        <div class="newsletter__copy">
+          <p class="eyebrow">05 — Correspondencia</p>
+          <h2 id="newsletter-title">Notas desde AURA.</h2>
+          <p>Lanzamientos, nuevas piezas y algunas ideas para vestir mejor. Sin ruido, sin promesas vacías.</p>
         </div>
         <div>
           <form class="newsletter__form" id="newsletter-form">
-            <input type="email" name="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico" required>
+            <label class="sr-only" for="newsletter-email">Correo electrónico</label>
+            <input id="newsletter-email" type="email" name="email" placeholder="tu@correo.com" autocomplete="email" required>
             <button class="btn btn--primary" type="submit">Suscribirme</button>
           </form>
           <p class="newsletter__note">Al suscribirte aceptás nuestra <a href="privacidad.html">política de privacidad</a>. Podés darte de baja cuando quieras.</p>

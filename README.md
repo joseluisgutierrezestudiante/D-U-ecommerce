@@ -11,7 +11,7 @@ AURA es una tienda de moda contemporánea desarrollada como proyecto académico 
 - **HTML5 semántico** con 14 páginas estáticas.
 - **CSS3** con custom properties, Flexbox, CSS Grid y media queries.
 - **JavaScript ES6** sin dependencias externas ni bundler.
-- **Tipografías autoalojadas:** Cormorant Garamond e Inter (WOFF2, subset latin).
+- **Tipografías autoalojadas:** Cormorant Garamond y DM Sans (WOFF2, subset latin).
 - **Persistencia:** `localStorage` (carrito, usuarios, sesión y pedidos).
 - **Analítica opcional:** GA4 mediante `js/site-config.js`; desactivada por defecto.
 
@@ -36,8 +36,9 @@ AURA es una tienda de moda contemporánea desarrollada como proyecto académico 
 ├── terminos.html
 ├── css/
 │   ├── styles.css              # Tokens, tipografías, base y layout
-│   ├── components.css          # Componentes y páginas
-│   └── responsive.css          # Breakpoints
+│   ├── components.css          # Componentes compartidos y páginas
+│   ├── responsive.css          # Breakpoints de las páginas internas
+│   └── landing.css             # Composición editorial de index.html
 ├── js/
 │   ├── data.js                 # Catálogo y configuración de envío
 │   ├── main.js                 # Header, footer, carrito, auth y utilidades
@@ -49,11 +50,19 @@ AURA es una tienda de moda contemporánea desarrollada como proyecto académico 
 │   ├── analytics.js
 │   └── site-config.js
 ├── assets/
-│   ├── fonts/                  # 3 archivos WOFF2
+│   ├── fonts/                  # 4 archivos WOFF2
 │   └── img/                    # Imágenes WebP + fallback JPG
 ├── robots.txt
 └── sitemap.xml
 ```
+
+---
+
+## Dirección visual
+
+La landing funciona como una portada editorial: fondo papel (`#F5F1EA`), superficie arena (`#EAE3D9`), vino (`#6B2938`) como acento, carbón (`#292724`) para texto y bronce (`#A58A72`) para detalles. Cormorant Garamond se reserva para títulos; DM Sans para navegación, textos, botones y precios.
+
+La composición usa una grilla de 12 columnas, un hero 5/7, categorías asimétricas y una selección de cuatro productos. Los estilos exclusivos de la landing viven en `css/landing.css`; los componentes reutilizables siguen en `css/components.css`.
 
 ---
 
@@ -121,7 +130,10 @@ El catálogo vive en `js/data.js` y se renderiza en el cliente. No hay API ni ba
 Implementado:
 
 - Estructura semántica con `main`, secciones y jerarquía de encabezados.
-- Atributos `alt` en imágenes y etiquetas asociadas en formularios.
+- Atributos `alt` en imágenes, dimensiones explícitas y etiquetas asociadas en formularios.
+- Enlace de salto al contenido y estilos globales de `:focus-visible`.
+- Nombre accesible estable en el enlace del carrito.
+- Header sticky corregido en todas las páginas.
 - Navegación por teclado en enlaces, botones y formularios.
 - `prefers-reduced-motion` para reducir animaciones.
 - Metadatos `title` y `description` por página.
@@ -131,8 +143,8 @@ Limitaciones conocidas:
 
 - El header y el footer se inyectan por JavaScript; sin JS no hay navegación ni contenido de catálogo.
 - Las páginas de producto y catálogo no tienen contenido estático indexable ni datos estructurados.
-- El carrito lateral no atrapa el foco y el enlace de la bolsa no tiene un nombre accesible estable.
-- No hay enlace de salto al contenido ni estilos globales de `:focus-visible`.
+- El carrito lateral aún no atrapa el foco ni lo devuelve al disparador.
+- La galería de producto y los filtros del catálogo todavía requieren mejoras de teclado y estado accesible.
 
 ---
 
@@ -150,14 +162,13 @@ Limitaciones conocidas:
 
 ## Roadmap
 
-1. Corregir el header sticky y la accesibilidad del carrito, el menú móvil y el foco.
-2. Añadir enlace de salto, landmarks completos y estilos globales de foco.
-3. Generar contenido estático o prerenderizado para catálogo y producto; metadatos canónicos, Open Graph y JSON-LD.
-4. Sincronizar filtros del catálogo con la URL.
-5. Implementar imágenes responsive y dimensiones explícitas.
-6. Separar `main.js` en módulos y dividir `components.css` en secciones documentadas.
-7. Incorporar linting, tests y documentación de componentes.
-8. Reemplazar la capa de datos por una API y autenticación reales para producción.
+1. Atrapar el foco del carrito lateral, devolverlo al disparador y cerrar con Escape.
+2. Generar contenido estático o prerenderizado para catálogo y producto; metadatos canónicos, Open Graph y JSON-LD.
+3. Sincronizar filtros del catálogo con la URL y comunicar su estado con `aria-pressed`.
+4. Implementar imágenes responsive con `srcset` y `sizes`.
+5. Separar `main.js` en módulos y dividir `components.css` en secciones documentadas.
+6. Incorporar linting, tests y documentación de componentes.
+7. Reemplazar la capa de datos por una API y autenticación reales para producción.
 
 ---
 

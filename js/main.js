@@ -446,8 +446,8 @@ function renderHeader() {
   const isAccount = ['perfil', 'login', 'registro'].includes(page);
   const isOrders = ['pedidos', 'pedido'].includes(page);
   const navLink = (target, label, pageNames) => {
-    const active = pageNames.includes(page) ? ' is-active' : '';
-    return `<a href="${target}" class="nav-link${active}">${label}</a>`;
+    const active = pageNames.includes(page);
+    return `<a href="${target}" class="nav-link${active ? ' is-active' : ''}"${active ? ' aria-current="page"' : ''}>${label}</a>`;
   };
   header.innerHTML = `
     <div class="topbar">
@@ -483,7 +483,7 @@ function renderHeader() {
             ${ICONS.user}
             <span class="icon-btn__label">${user ? escapeHtml(firstName) : 'Cuenta'}</span>
           </a>
-          <a href="carrito.html" class="icon-btn${page === 'carrito' ? ' is-active' : ''}" title="Carrito de compras" aria-haspopup="dialog">
+          <a href="carrito.html" class="icon-btn${page === 'carrito' ? ' is-active' : ''}" aria-label="Abrir carrito de compras" title="Carrito de compras" aria-haspopup="dialog">
             ${ICONS.bag}
             <span class="cart-count is-empty">0</span>
           </a>
@@ -497,6 +497,15 @@ function renderHeader() {
     const open = nav.classList.toggle('is-open');
     toggle.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || !nav.classList.contains('is-open')) return;
+    nav.classList.remove('is-open');
+    toggle.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Abrir menú');
+    toggle.focus();
   });
   const cartLink = header.querySelector('.header__actions a[href="carrito.html"]');
   if (cartLink) {
@@ -517,12 +526,7 @@ function renderFooter() {
         <div class="footer__grid">
           <div class="footer__brand">
             <a class="brand brand--light" href="index.html">AURA<span class="brand__dot">.</span></a>
-            <p>Moda contemporánea pensada para durar. Diseños atemporales, materiales responsables y envíos a todo el país.</p>
-            <div class="footer__social">
-              <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-              <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8Z" stroke-linejoin="round"/></svg></a>
-              <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M14 4v10a4 4 0 1 1-4-4"/><path d="M14 4c.5 3 2.5 5 5 5"/></svg></a>
-            </div>
+            <p>Moda contemporánea pensada para durar. Diseños atemporales y envíos a todo el país.</p>
           </div>
           <div class="footer__col">
             <h4>Tienda</h4>

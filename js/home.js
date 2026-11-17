@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.getElementById('featured-grid');
   if (grid) {
-    grid.innerHTML = PRODUCTS.filter((product) => product.featured)
-      .slice(0, 8)
+    // Selección editorial: cuatro piezas, no el catálogo completo.
+    const featuredIds = ['vestido-midi', 'blazer-minimal', 'camiseta-oversize', 'bolso-milan'];
+    grid.innerHTML = featuredIds
+      .map((id) => PRODUCTS.find((product) => product.id === id))
+      .filter(Boolean)
       .map(productCard)
       .join('');
   }
@@ -15,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!email.value.trim()) return;
       newsletter.reset();
       window.auraTrack?.('generate_lead', { method: 'newsletter' });
-      toast('Gracias por suscribirte. Revisá tu correo para recibir el cupón.');
+      toast('Gracias por suscribirte. Vas a recibir nuestras próximas novedades.');
     });
   }
 });
