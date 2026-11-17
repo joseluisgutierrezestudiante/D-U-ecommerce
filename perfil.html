@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Perfil de usuario de AURA. Gestioná tus datos personales y de envío.">
+  <title>Mi perfil | AURA</title>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <meta name="google-site-verification" content="REEMPLAZAR_CON_CODIGO_DE_SEARCH_CONSOLE">
+</head>
+<body data-page="perfil">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="account">
+      <div class="container account__layout">
+        <aside class="account-nav">
+          <div class="account-nav__avatar" id="account-avatar">AU</div>
+          <h2 id="account-name">Mi cuenta</h2>
+          <p class="account-nav__email" id="account-email"></p>
+          <div class="account-nav__links">
+            <a href="perfil.html" class="is-active">Mi perfil</a>
+            <a href="pedidos.html">Mis pedidos</a>
+            <a href="carrito.html">Mi carrito</a>
+            <button type="button" id="logout-button">Cerrar sesión</button>
+          </div>
+        </aside>
+
+        <div class="account-panel">
+          <div class="panel-card">
+            <div class="panel-card__head">
+              <div>
+                <h1>Mi perfil</h1>
+                <p>Resumen de tu actividad en AURA.</p>
+              </div>
+              <a class="btn btn--ghost btn--sm" href="pedidos.html">Ver mis pedidos</a>
+            </div>
+            <div class="stats-grid" id="profile-stats"></div>
+          </div>
+
+          <div class="panel-card">
+            <div class="panel-card__head">
+              <div>
+                <h2>Datos personales</h2>
+                <p>Estos datos se utilizan para agilizar tus compras y envíos.</p>
+              </div>
+            </div>
+            <form class="auth-form" id="profile-form" novalidate>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="profile-name">Nombre completo</label>
+                  <input type="text" id="profile-name" name="name" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                  <label for="profile-email">Correo electrónico</label>
+                  <input type="email" id="profile-email" name="email" autocomplete="email" readonly>
+                </div>
+                <div class="form-field">
+                  <label for="profile-phone">Teléfono</label>
+                  <input type="tel" id="profile-phone" name="phone" placeholder="+595 981 000 000" autocomplete="tel">
+                </div>
+                <div class="form-field">
+                  <label for="profile-city">Ciudad</label>
+                  <input type="text" id="profile-city" name="city" placeholder="Ciudad del Este" autocomplete="address-level2">
+                </div>
+                <div class="form-field form-field--full">
+                  <label for="profile-address">Dirección</label>
+                  <input type="text" id="profile-address" name="address" placeholder="Av. Central 245, Apto 3B" autocomplete="street-address">
+                </div>
+                <div class="form-field form-field--full">
+                  <label for="profile-country">País</label>
+                  <select id="profile-country" name="country" autocomplete="country-name">
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Bolivia">Bolivia</option>
+                  </select>
+                </div>
+              </div>
+              <p class="form-error" id="profile-error"></p>
+              <button class="btn btn--primary" type="submit">Guardar cambios</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/site-config.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/perfil.js" defer></script>
+</body>
+</html>

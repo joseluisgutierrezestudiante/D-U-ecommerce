@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carrito de compras de AURA. Revisá tus productos antes de finalizar la compra.">
+  <title>Carrito | AURA</title>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <meta name="google-site-verification" content="REEMPLAZAR_CON_CODIGO_DE_SEARCH_CONSOLE">
+</head>
+<body data-page="carrito">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Miga de pan">
+          <a href="index.html">Inicio</a><span>/</span><span>Carrito</span>
+        </nav>
+        <span class="eyebrow" style="margin-top:1rem;">Tu selección</span>
+        <h1>Carrito de compras</h1>
+        <p>Revisá tus productos, ajustá cantidades y avanzá al pago cuando estés listo.</p>
+      </div>
+    </section>
+
+    <section class="cart-section">
+      <div class="container" id="cart-content"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/site-config.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/cart.js" defer></script>
+</body>
+</html>

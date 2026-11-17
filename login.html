@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Iniciá sesión en AURA para gestionar tus pedidos y compras.">
+  <title>Iniciar sesión | AURA</title>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <meta name="google-site-verification" content="REEMPLAZAR_CON_CODIGO_DE_SEARCH_CONSOLE">
+</head>
+<body data-page="login">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="auth">
+      <div class="auth__visual">
+        <img src="assets/img/cat-mujer.webp" alt="Moda contemporánea AURA" decoding="async">
+        <div class="auth__quote">
+          <p>“El estilo es una forma de contar quién sos sin decir una palabra.”</p>
+          <span>AURA · Moda con identidad</span>
+        </div>
+      </div>
+      <div class="auth__panel">
+        <div class="auth-card" id="auth-card">
+          <span class="eyebrow">Bienvenido de nuevo</span>
+          <h1>Iniciar sesión</h1>
+          <p>Accedé a tu cuenta para ver tus pedidos y finalizar tus compras más rápido.</p>
+
+          <form class="auth-form" id="login-form" novalidate>
+            <div class="form-field">
+              <label for="login-email">Correo electrónico</label>
+              <input type="email" id="login-email" name="email" placeholder="demo@aura.com" autocomplete="email" required>
+            </div>
+            <div class="form-field">
+              <label for="login-password">Contraseña</label>
+              <input type="password" id="login-password" name="password" placeholder="Tu contraseña" autocomplete="current-password" required>
+            </div>
+            <p class="form-error" id="login-error"></p>
+            <button class="btn btn--primary btn--full" type="submit">Ingresar</button>
+          </form>
+
+          <div class="auth-hint">
+            <strong>Cuenta de demostración</strong>
+            Correo: <code>demo@aura.com</code> · Contraseña: <code>123456</code>
+            <button class="filter-clear" type="button" id="demo-fill" style="margin-top:0.6rem;">Usar cuenta demo</button>
+          </div>
+
+          <p class="auth-switch">¿No tenés cuenta? <a href="registro.html">Crear cuenta</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/site-config.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/login.js" defer></script>
+</body>
+</html>

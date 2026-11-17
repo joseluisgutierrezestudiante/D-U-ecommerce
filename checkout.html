@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Finalizá tu compra en AURA de forma segura.">
+  <title>Pago | AURA</title>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <meta name="google-site-verification" content="REEMPLAZAR_CON_CODIGO_DE_SEARCH_CONSOLE">
+</head>
+<body data-page="checkout">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Miga de pan">
+          <a href="index.html">Inicio</a><span>/</span><a href="carrito.html">Carrito</a><span>/</span><span>Pago</span>
+        </nav>
+        <span class="eyebrow" style="margin-top:1rem;">Último paso</span>
+        <h1>Finalizar compra</h1>
+        <p>Completá tus datos de envío y elegí cómo querés pagar. Tus datos están protegidos.</p>
+      </div>
+    </section>
+
+    <section class="checkout">
+      <div class="container" id="checkout-content">
+        <div class="checkout__layout">
+          <form class="checkout-form" id="checkout-form" novalidate>
+            <div class="checkout-block">
+              <div class="checkout-block__head">
+                <span>1</span>
+                <h2>Datos de contacto</h2>
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="checkout-name">Nombre completo</label>
+                  <input type="text" id="checkout-name" name="name" placeholder="Ana Torres" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                  <label for="checkout-email">Correo electrónico</label>
+                  <input type="email" id="checkout-email" name="email" placeholder="ana@correo.com" autocomplete="email" required>
+                </div>
+                <div class="form-field form-field--full">
+                  <label for="checkout-phone">Teléfono</label>
+                  <input type="tel" id="checkout-phone" name="phone" placeholder="+595 981 000 000" autocomplete="tel" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout-block">
+              <div class="checkout-block__head">
+                <span>2</span>
+                <h2>Dirección de envío</h2>
+              </div>
+              <div class="form-row">
+                <div class="form-field form-field--full">
+                  <label for="checkout-address">Dirección</label>
+                  <input type="text" id="checkout-address" name="address" placeholder="Av. Central 245, Apto 3B" autocomplete="street-address" required>
+                </div>
+                <div class="form-field">
+                  <label for="checkout-city">Ciudad</label>
+                  <input type="text" id="checkout-city" name="city" placeholder="Ciudad del Este" autocomplete="address-level2" required>
+                </div>
+                <div class="form-field">
+                  <label for="checkout-postal">Código postal</label>
+                  <input type="text" id="checkout-postal" name="postal" placeholder="7000" autocomplete="postal-code" required>
+                </div>
+                <div class="form-field form-field--full">
+                  <label for="checkout-country">País</label>
+                  <select id="checkout-country" name="country" autocomplete="country-name" required>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Bolivia">Bolivia</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout-block">
+              <div class="checkout-block__head">
+                <span>3</span>
+                <h2>Método de pago</h2>
+              </div>
+              <div class="payment-options">
+                <label class="payment-option is-active">
+                  <input type="radio" name="payment" value="tarjeta" checked>
+                  <span class="payment-option__body">
+                    <strong>Tarjeta de crédito o débito</strong>
+                    <span>Pago inmediato y seguro</span>
+                  </span>
+                  <span class="payment-option__icons"><span>VISA</span><span>MC</span></span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="contraentrega">
+                  <span class="payment-option__body">
+                    <strong>Pago contra entrega</strong>
+                    <span>Pagás en efectivo al recibir tu pedido</span>
+                  </span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="transferencia">
+                  <span class="payment-option__body">
+                    <strong>Transferencia bancaria</strong>
+                    <span>Te enviamos los datos por correo</span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="card-fields" id="card-fields">
+                <div class="form-row">
+                  <div class="form-field form-field--full">
+                    <label for="card-number">Número de tarjeta</label>
+                    <input type="text" id="card-number" name="cardNumber" placeholder="1234 5678 9012 3456" inputmode="numeric" autocomplete="cc-number" maxlength="19">
+                  </div>
+                  <div class="form-field form-field--full">
+                    <label for="card-name">Nombre en la tarjeta</label>
+                    <input type="text" id="card-name" name="cardName" placeholder="ANA TORRES" autocomplete="cc-name">
+                  </div>
+                  <div class="form-field">
+                    <label for="card-expiry">Vencimiento</label>
+                    <input type="text" id="card-expiry" name="cardExpiry" placeholder="MM/AA" inputmode="numeric" autocomplete="cc-exp" maxlength="5">
+                  </div>
+                  <div class="form-field">
+                    <label for="card-cvv">CVV</label>
+                    <input type="text" id="card-cvv" name="cardCvv" placeholder="123" inputmode="numeric" autocomplete="cc-csc" maxlength="4">
+                  </div>
+                </div>
+                <p class="muted" style="font-size:0.74rem;">Proyecto académico: podés completar con datos ficticios, no se procesa ningún cobro real.</p>
+              </div>
+            </div>
+
+            <div class="checkout-block">
+              <div class="checkout-block__head">
+                <span>4</span>
+                <h2>Notas del pedido</h2>
+              </div>
+              <div class="form-field">
+                <label for="checkout-notes">Indicaciones adicionales (opcional)</label>
+                <textarea id="checkout-notes" name="notes" placeholder="Ej.: entregar en horario de tarde, tocar timbre dos veces..."></textarea>
+              </div>
+              <label class="form-check" style="margin-top:1rem;">
+                <input type="checkbox" id="checkout-terms" name="terms" required>
+                <span>Acepto los <a href="#">términos y condiciones</a> y la <a href="#">política de privacidad</a> de AURA.</span>
+              </label>
+              <p class="form-error" id="checkout-error"></p>
+            </div>
+
+            <button class="btn btn--primary btn--full" type="submit" id="confirm-order">Confirmar pedido</button>
+          </form>
+
+          <aside class="order-summary">
+            <h2>Tu pedido</h2>
+            <div class="order-summary__items" id="order-summary-items"></div>
+            <div class="summary-rows">
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="summary-subtotal">$0.00</span>
+              </div>
+              <div class="summary-row" id="summary-shipping-row">
+                <span>Envío</span>
+                <span id="summary-shipping">$0.00</span>
+              </div>
+            </div>
+            <div class="summary-total">
+              <span>Total</span>
+              <strong id="summary-total">$0.00</strong>
+            </div>
+            <p class="summary-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+              Compra protegida
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/site-config.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/checkout.js" defer></script>
+</body>
+</html>

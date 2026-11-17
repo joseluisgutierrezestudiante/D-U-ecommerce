@@ -1,0 +1,19 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Dependencias y artefactos
+node_modules/
+dist/
+*.log
+
+# Entornos y temporales
+.env
+.env.*
+!.env.example
+.audit-chrome/

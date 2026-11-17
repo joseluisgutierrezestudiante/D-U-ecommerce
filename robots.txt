@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /carrito.html
+Disallow: /checkout.html
+Disallow: /confirmacion.html
+Disallow: /login.html
+Disallow: /registro.html
+Disallow: /perfil.html
+Disallow: /pedidos.html
+Disallow: /pedido.html
+
+Sitemap: https://www.aura.com/sitemap.xml

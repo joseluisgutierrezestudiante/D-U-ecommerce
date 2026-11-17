@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo completo de AURA: ropa para mujer y hombre, calzado y accesorios de moda.">
+  <title>Catálogo | AURA</title>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <meta name="google-site-verification" content="REEMPLAZAR_CON_CODIGO_DE_SEARCH_CONSOLE">
+</head>
+<body data-page="catalogo">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Miga de pan">
+          <a href="index.html">Inicio</a><span>/</span><span>Catálogo</span>
+        </nav>
+        <span class="eyebrow" style="margin-top:1rem;">Tienda en línea</span>
+        <h1>Catálogo</h1>
+        <p>Explorá todas nuestras prendas y accesorios. Filtrá por categoría, talle o precio para encontrar exactamente lo que buscás.</p>
+      </div>
+    </section>
+
+    <section class="catalog">
+      <div class="container catalog__layout">
+        <aside class="filters" aria-label="Filtros de productos">
+          <details class="filter-accordion" open>
+            <summary>Categorías<span class="filter-accordion__icon" aria-hidden="true"></span></summary>
+            <div class="filter-list" id="category-filter"></div>
+          </details>
+          <details class="filter-accordion" open>
+            <summary>Talle<span class="filter-accordion__icon" aria-hidden="true"></span></summary>
+            <div class="size-options" id="size-filter"></div>
+          </details>
+          <details class="filter-accordion" open>
+            <summary>Precio máximo<span class="filter-accordion__icon" aria-hidden="true"></span></summary>
+            <div class="range-wrap">
+              <input type="range" id="price-range" min="0" max="150" step="5" value="150" style="--range-progress:100%;" aria-label="Precio máximo">
+              <div class="range-values">
+                <span>$0</span>
+                <span id="price-output">Hasta $150</span>
+              </div>
+            </div>
+          </details>
+          <button class="filter-clear" type="button" id="clear-filters">Limpiar filtros</button>
+        </aside>
+
+        <div>
+          <div class="catalog__toolbar">
+            <p class="catalog__count" id="results-count"></p>
+            <form class="catalog__search" id="catalog-search" role="search">
+              <input type="search" name="q" placeholder="Buscar en el catálogo" aria-label="Buscar en el catálogo">
+              <button type="submit" aria-label="Buscar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              </button>
+            </form>
+            <div class="select">
+              <select id="sort-select" aria-label="Ordenar productos">
+                <option value="relevance">Ordenar: destacados</option>
+                <option value="price-asc">Precio: menor a mayor</option>
+                <option value="price-desc">Precio: mayor a menor</option>
+                <option value="rating">Mejor valorados</option>
+                <option value="name">Nombre: A - Z</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="active-filters" id="active-filters"></div>
+          <div class="products-grid" id="catalog-grid"></div>
+          <div class="empty-state hidden" id="catalog-empty">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/><path d="M8 11h6"/></svg>
+            <h3>No encontramos productos</h3>
+            <p>Probá quitando algunos filtros o buscando con otras palabras.</p>
+            <button class="btn btn--ghost btn--sm" type="button" id="empty-reset">Ver todos los productos</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/site-config.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/catalogo.js" defer></script>
+</body>
+</html>

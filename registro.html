@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creá tu cuenta en AURA y empezá a comprar hoy.">
+  <title>Crear cuenta | AURA</title>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <meta name="google-site-verification" content="REEMPLAZAR_CON_CODIGO_DE_SEARCH_CONSOLE">
+</head>
+<body data-page="registro">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="auth">
+      <div class="auth__visual">
+        <img src="assets/img/hero.webp" alt="Colección de moda AURA" decoding="async">
+        <div class="auth__quote">
+          <p>“Tu guardarropa, tus reglas. Empezá a construir tu estilo hoy.”</p>
+          <span>AURA · Nueva temporada</span>
+        </div>
+      </div>
+      <div class="auth__panel">
+        <div class="auth-card">
+          <span class="eyebrow">Sumate a AURA</span>
+          <h1>Crear cuenta</h1>
+          <p>Registrate para guardar tus datos, seguir tus pedidos y acceder a beneficios exclusivos.</p>
+
+          <form class="auth-form" id="register-form" novalidate>
+            <div class="form-field">
+              <label for="register-name">Nombre completo</label>
+              <input type="text" id="register-name" name="name" placeholder="Ana Torres" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="register-email">Correo electrónico</label>
+              <input type="email" id="register-email" name="email" placeholder="ana@correo.com" autocomplete="email" required>
+            </div>
+            <div class="form-field">
+              <label for="register-phone">Teléfono (opcional)</label>
+              <input type="tel" id="register-phone" name="phone" placeholder="+595 981 000 000" autocomplete="tel">
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="register-password">Contraseña</label>
+                <input type="password" id="register-password" name="password" placeholder="Mínimo 6 caracteres" autocomplete="new-password" required>
+              </div>
+              <div class="form-field">
+                <label for="register-confirm">Repetir contraseña</label>
+                <input type="password" id="register-confirm" name="confirm" placeholder="Repetí tu contraseña" autocomplete="new-password" required>
+              </div>
+            </div>
+            <label class="form-check">
+              <input type="checkbox" id="register-terms" required>
+              <span>Acepto los <a href="#">términos y condiciones</a> y la <a href="#">política de privacidad</a>.</span>
+            </label>
+            <p class="form-error" id="register-error"></p>
+            <button class="btn btn--primary btn--full" type="submit">Crear mi cuenta</button>
+          </form>
+
+          <p class="auth-switch">¿Ya tenés una cuenta? <a href="login.html">Iniciar sesión</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/site-config.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/registro.js" defer></script>
+</body>
+</html>
